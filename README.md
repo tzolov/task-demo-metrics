@@ -87,8 +87,11 @@ dataflow:>task create --name task1 --definition "myTask"
 
 * Launch `task1`
 ```
-dataflow:>task launch --name taask1
+dataflow:>task launch --name task1
 ```
+
+Check task execution in the SCDF UI: http://localhost:9393/dashboard/#/tasks/executions
+
 
 ## Grafana 
 
