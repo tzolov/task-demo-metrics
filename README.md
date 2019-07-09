@@ -98,6 +98,6 @@ Check task execution in the SCDF UI: http://localhost:9393/dashboard/#/tasks/exe
 
 ## Grafana 
 
-Open Grafana at http://localhost:3000 (user: `admin`, password: `admin`) and select the `Spring Cloud Task & Batch` dashboard 
+Open Grafana at http://localhost:3000 (user: `admin`, password: `admin`) and select the `Task & Batch` dashboard 
 
 ![grafana task](./docs/grafana-task.png "Grafana Task")
