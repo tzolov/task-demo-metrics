@@ -80,14 +80,16 @@ dataflow:>app register --name myTask --type task --uri https://github.com/tzolov
 
 ```
 
-* Create task definition `task1` using the custom task.
+* Create two tasks: `task1` and `task2` using the `myTask` application.
 ```
 dataflow:>task create --name task1 --definition "myTask"
+dataflow:>task create --name task2 --definition "myTask"
 ```
 
-* Launch `task1`
+* Launch `task1` and `task2` couple of times
 ```
 dataflow:>task launch --name task1
+dataflow:>task launch --name task2
 ```
 
 Check task execution in the SCDF UI: http://localhost:9393/dashboard/#/tasks/executions
