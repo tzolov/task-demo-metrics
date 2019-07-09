@@ -3,6 +3,7 @@ package com.example.task.taskdemometrics;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -34,7 +35,8 @@ public class TaskDemoMetricsApplication {
 
 
 		@Override
-		public void run(String... strings) {
+		public void run(String... strings) throws InterruptedException {
+			Thread.sleep((1 + new Random().nextInt(5)) * 1000);
 			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 			logger.info(dateFormat.format(new Date()));
 		}
