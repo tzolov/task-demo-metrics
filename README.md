@@ -3,40 +3,60 @@
 
 Bootstrap by follow the [Task development instructions](https://docs.spring.io/spring-cloud-task/docs/2.0.0.RELEASE/reference/htmlsingle/#getting-started-developing-first-task) and then: 
 
-* Set the POM parent to Boot 2.2.0.M4:
+* Set the POM parent to Boot 2.2.0.M4 or newer
 
 ```xml
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.0.M4</version>
-		<relativePath/>
-	</parent>
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.2.0.M4</version>
+    <relativePath/>
+</parent>
 ``` 
 
-* Add the following dependencies: 
+* Add dependencies to enable the Spring Cloud Task functionality and to configure the jdbc dependencies for the task repository: 
 
 ```xml
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.mariadb.jdbc</groupId>
-			<artifactId>mariadb-java-client</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-task</artifactId>
-			<version>2.2.0.BUILD-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-task-core</artifactId>
-			<version>2.2.0.BUILD-SNAPSHOT</version>
-		</dependency>
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-task</artifactId>
+    <version>2.2.0.BUILD-SNAPSHOT</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-task-core</artifactId>
+    <version>2.2.0.BUILD-SNAPSHOT</version>
+</dependency>
+``` 
+
+* Add dependencies to configure the jdbc dependencies for the task repository: 
+
+```xml
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-jdbc</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.mariadb.jdbc</groupId>
+    <artifactId>mariadb-java-client</artifactId>
+    <scope>runtime</scope>
+</dependency>
+
+``` 
+
+* Add dependencies to configure Micrometer integration: 
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+<dependency>
+    <groupId>io.micrometer</groupId>
+    <artifactId>micrometer-registry-influx</artifactId>
+</dependency>
 
 ``` 
 
