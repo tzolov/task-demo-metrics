@@ -121,3 +121,14 @@ Check task execution in the SCDF UI: http://localhost:9393/dashboard/#/tasks/exe
 Open Grafana at http://localhost:3000 (user: `admin`, password: `admin`) and select the `Task & Batch` dashboard 
 
 ![grafana task](./docs/grafana-task.png "Grafana Task")
+
+
+## Docker images
+
+Build and publish docker image
+
+```
+./mvnw clean install docker:build
+./mvnw docker:push
+
+```
