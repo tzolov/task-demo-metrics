@@ -74,24 +74,4 @@ public class TaskDemoMetricsApplication {
 				.incrementer(new RunIdIncrementer())
 				.build();
 	}
-
-	//@Bean
-	//public TimestampTask timeStampTask() {
-	//	return new TimestampTask();
-	//}
-
-	///**
-	// * A commandline runner that prints a timestamp.
-	// */
-	//public class TimestampTask implements CommandLineRunner {
-	//	private final Log logger = LogFactory.getLog(TimestampTask.class);
-	//
-	//
-	//	@Override
-	//	public void run(String... strings) throws InterruptedException {
-	//		Thread.sleep((1 + new Random().nextInt(5)) * 1000);
-	//		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-	//		logger.info(dateFormat.format(new Date()));
-	//	}
-	//}
 }
